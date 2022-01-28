@@ -1,0 +1,10 @@
+.main-invoices{
+  display: flex;
+}
+
+.inv-link{
+  display: flex;
+  flex-direction: column;
+margin-right: 5px;
+color: crimson;
+}
