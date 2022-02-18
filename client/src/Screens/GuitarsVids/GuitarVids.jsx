@@ -1,9 +1,13 @@
-import React from 'react';
+import React from 'react'
+import Navbar from '../../Components/Navbar/Navbar'
+import "./GuitarVids.css"
 
-function Expenses() {
-  return <div>
-    <h1>Expenses</h1>
-  </div>;
+const GuitarVids = () => {
+  return (
+    <div className='guitarVids-main'>
+      <Navbar />
+      GuitarVids</div>
+  )
 }
 
-export default Expenses;
+export default GuitarVids

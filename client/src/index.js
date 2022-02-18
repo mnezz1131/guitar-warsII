@@ -3,45 +3,29 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import Expenses from "./Expenses/Expenses.jsx";
-import Invoices from "./Invoices/Invoices.jsx";
-import reportWebVitals from "./reportWebVitals";
-import Invoice from "./Invoice/Invoice.jsx";
+import GuitarWars from "../src/Screens/GuitarWars/GuitarWars.jsx"
+import GuitarSearch from "../src/Screens/GuitarResearch/GuitarResearch.jsx";
+import GuitarVids from "../src/Screens/GuitarsVids/GuitarVids.jsx";
+import GuitarList from "../src/Screens/GuitarList/GuitarList.jsx"
+
+
+import Home from "../src/Screens/Home/Home.jsx";
+
 ReactDOM.render(
   <React.StrictMode>
+
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="expenses" element={<Expenses />} />
-
-          <Route path="invoices" element={<Invoices />}>
-            <Route
-              index
-              element={
-                <main style={{ padding: "1rem" }}>
-                  <p>Select a f'ing invoice</p>
-                </main>
-              }
-            />
-            <Route path=":invoiceId" element={<Invoice />} />
-          </Route>
-
-          <Route
-            path="*"
-            element={
-              <main>
-                <p>There is nothing here!</p>
-              </main>
-            }
-          />
-        </Route>
+        <Route path="/" element={<App />} />
+         <Route path="home" element={<Home />} />
+         <Route path="guitar-wars" element={<GuitarWars />} />
+         <Route path="guitar-wiki" element={<GuitarSearch />} />
+        <Route path="guitar-vids" element={<GuitarVids />} />
+        <Route path="guitar-list" element={<GuitarList />} />
+        
+          
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
